@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=Y3AKnST0WRLJ&format=png&color=000000" type="image/x-icon">
+    <title>Planilla de Partido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Planilla de Partido</h1>
+        
+        <!-- Tabla de información del partido -->
+        <table id="info-table">
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Temporada</td>
+                    <td><input type="text" id="season" placeholder="Ejemplo: 2024"></td>
+                </tr>
+                <tr>
+                    <td>Jornada</td>
+                    <td><input type="text" id="round" placeholder="Número de Jornada"></td>
+                </tr>
+                <tr>
+                    <td>Categoría</td>
+                    <td><input type="text" id="category" placeholder="Categoría del Partido"></td>
+                </tr>
+                <tr>
+                    <td>Fecha del Partido</td>
+                    <td><input type="text" id="match-date" placeholder="Fecha del partido"></td>
+                </tr>
+                <tr>
+                    <td>Rival</td>
+                    <td><input type="text" id="rival-name" placeholder="Nombre del Rival"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Mostrar fecha y nombre del rival -->
+        <div class="match-info">
+            <div id="rival-name-display" class="rival-name"></div>
+            <div id="match-date-display"></div>
+        </div>
+        
+        <div id="timer" class="timer-display">00:00</div>
+        
+        <!-- Controles del contador y tiempo -->
+        <div class="controls">
+            <!-- Los botones serán creados dinámicamente -->
+        </div>
+        
+        <!-- Tabla de jugadores -->
+        <table id="players-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>R/A</th>
+                    <th>G</th>
+                    <th>AS</th>
+                    <th>PR</th>
+                    <th>RB</th>
+                    <th>FR</th>
+                    <th>MIN</th>
+                    <th>AM</th>
+                    <th>EX</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas de jugadores se agregarán dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Cargar PDFLib antes del script principal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.0/pdf-lib.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

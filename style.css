@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    flex: 1; /* Permite que los botones se ajusten en pantallas pequeñas */
+    min-width: 120px; /* Asegura un tamaño mínimo para los botones */
+}
+
+.controls button:hover {
+    background-color: #45a049;
+}
+
+#timer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas pequeñas */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 4px; /* Reducido para que no haya mucho espacio interno */
+    text-align: center;
+    font-size: 0.875rem;
+    min-width: 50px; /* Asegura un ancho mínimo para evitar que las celdas se estiren demasiado */
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.timer-display {
+    font-size: 3rem;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.yellow-card, .red-card {
+    text-align: center;
+    min-width: 50px;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    font-size: 0.875rem;
+}
+
+.yellow-card {
+    background-color: yellow;
+}
+
+.red-card {
+    background-color: red;
+}
+
+.match-info {
+    display: flex;
+    flex-direction: column; /* Cambio a columna en pantallas pequeñas */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin-bottom: 20px;
+}
+
+.rival-name, .match-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0; /* Espacio vertical entre elementos */
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.input-container input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .controls button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .timer-display {
+        font-size: 2rem;
+    }
+
+    .rival-name, .match-date {
+        font-size: 1rem;
+    }
+
+    table {
+        font-size: 0.75rem;
+    }
+
+    th, td {
+        padding: 3px; /* Reducido aún más para pantallas pequeñas */
+    }
+
+    .input-container input {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .controls button {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .timer-display {
+        font-size: 1.5rem;
+    }
+
+    .rival-name, .match-date {
+        font-size: 0.875rem;
+    }
+
+    table {
+        font-size: 0.7rem;
+    }
+
+    th, td {
+        padding: 2px; /* Aún más reducido para pantallas muy pequeñas */
+    }
+
+    .input-container input {
+        font-size: 0.75rem;
+    }
+}
