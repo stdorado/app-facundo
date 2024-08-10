@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Añadir eventos de clic a las celdas
         newRow.querySelector('.ing-sal').addEventListener('click', function () {
-            let currentValue = this.getAttribute('data-state') || 'Out';
-            currentValue = currentValue === 'Out' ? `In (${timerDisplay.textContent})` : `Out (${timerDisplay.textContent})`;
+            let currentValue = this.getAttribute('data-state') || 0;
+            currentValue++;
             this.setAttribute('data-state', currentValue);
             this.textContent = currentValue;
         });
@@ -133,11 +133,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         newRow.querySelector('.minutos').addEventListener('click', function () {
-            let currentValue = parseInt(this.getAttribute('data-value')) || 0;
-            currentValue++;
-            this.setAttribute('data-value', currentValue);
-            this.textContent = `${currentValue}`;
+            let currentValue = this.getAttribute('data-state') || 'Out';
+            currentValue = currentValue === 'Out' ? `In (${timerDisplay.textContent})` : `Out (${timerDisplay.textContent})`;
+            this.setAttribute('data-state', currentValue);
+            this.textContent = currentValue;
         });
+
     }
 
     for (let i = 1; i <= 23; i++) {
@@ -197,8 +198,8 @@ async function downloadPDF() {
 
     // Configuración de la tabla
     const tableWidth = 500;
-    const cellPadding = 8; // Padding aumentado
-    const rowHeight = 25; // Altura de las celdas aumentada
+    const cellPadding = 3.5; // Padding aumentado
+    const rowHeight = 20; // Altura de las celdas aumentada
     const headerHeight = rowHeight * 2; // Doble altura para encabezado y valores
     let x = (width - tableWidth) / 2;
     let y = height - 50; // Posición vertical inicial
